@@ -1,6 +1,4 @@
 #!/bin/bash
-make VERSION=2.14.1 JAVAVERSION=8.362.09 clean
-exit
 
 make VERSION=2.14.1 JAVAVERSION=8.362.09 release
 make VERSION=2.14.1 JAVAVERSION=8.362.09 clean
