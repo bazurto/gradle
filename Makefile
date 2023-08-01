@@ -28,4 +28,6 @@ clean:
 	rm -fr $(DOWNLOADZIP)
 	rm -fr $(ASSET)
 	rm -fr $(EXTRACTEDDIR)
+	rm -fr .bz
+	rm -fr .bz.lock
 
