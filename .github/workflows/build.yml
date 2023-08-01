@@ -1,0 +1,51 @@
+name: Release
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: release 2.14.1
+      run: |
+		make VERSION=2.14.1 JAVAVERSION=8.362.09 release
+		make VERSION=2.14.1 JAVAVERSION=8.362.09 clean
+
+    - name: release 3.5.1
+      run: |
+		make VERSION=3.5.1 JAVAVERSION=8.362.09 release
+		make VERSION=3.5.1 JAVAVERSION=8.362.09 clean
+
+    - name: release 4.10.3
+      run: |
+		make VERSION=4.10.3 JAVAVERSION=8.362.09 release
+		make VERSION=4.10.3 JAVAVERSION=8.362.09 clean
+
+    - name: release 5.6.4
+      run: |
+		make VERSION=5.6.4 JAVAVERSION=11.0.18.10 release
+		make VERSION=5.6.4 JAVAVERSION=11.0.18.10 clean
+
+    - name: release 6.9.4
+      run: |
+		make VERSION=6.9.4 JAVAVERSION=11.0.18.10 release
+		make VERSION=6.9.4 JAVAVERSION=11.0.18.10 clean
+
+    - name: release 7.6.2
+      run: |
+		make VERSION=7.6.2 JAVAVERSION=17.0.6.10 release
+		make VERSION=7.6.2 JAVAVERSION=17.0.6.10 clean
+
+    - name: release 8.2.1
+      run: |
+		make VERSION=8.2.1 JAVAVERSION=17.0.6.10 release
+		make VERSION=8.2.1 JAVAVERSION=17.0.6.10 clean
+
