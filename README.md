@@ -6,7 +6,7 @@
 2. Create a `.bz` file in your root of your project with the following content:
     ```hcl
     deps = [
-        "github.com/bazurto/gradle@8.0.4"
+        "github.com/bazurto/gradle@8.7"
     ]
     ```
 3. Run the command bellow to initialize your gradle project and follow the prompt:
